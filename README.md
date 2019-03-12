@@ -1,6 +1,6 @@
 # GasolinerasNodeAPI
 
-Backend para el proyecto Stack MEAN utilizando la [API de Gasolineras](https://sedeaplicaciones.minetur.gob.es/ServiciosRESTCarburantes/PreciosCarburantes/help) del Ministerio de Industria.
+Parte de un proyecto Stack MEAN: Backend utilizando la [API de Gasolineras](https://sedeaplicaciones.minetur.gob.es/ServiciosRESTCarburantes/PreciosCarburantes/help) del Ministerio de Industria.
 
 El backend genera otra API REST similar, que permite realizar consultas más concretas, almacenando los datos obtenidos en una base de datos MongoDB.
 
@@ -23,7 +23,14 @@ La API de gasolineras oficial se consulta para actualizar la base de datos Mongo
 
 Podría ser mejor crear otro script NodeJS que realice esta actualización, y automatizar mediante CRON u otra herramienta de gestión de tareas la actualización periódica. La API del Ministerio de Industria actualiza sus datos diariamente.
 
+## Endpoints (GET)
+
+- `/codpostal/<codpostal>`: Obtener lista de gasolineras en el código postal indicado
+- `/id/<id>` ó `/cod/<codigo>`: Buscar una gasolinera por ID/código Estación de Servicio
+
 ## Estructura documentos MongoDB
+
+Los documentos se devuelven inalterados por la API al realizar peticiones a los endpoints.
 
 ```js
 {
