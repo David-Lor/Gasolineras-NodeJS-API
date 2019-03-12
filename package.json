@@ -1,0 +1,25 @@
+{
+  "name": "gasolina-backend",
+  "version": "1.0.0",
+  "description": "Backed de la aplicacion de Precios Gasolineras",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "api",
+    "gasolina",
+    "gasolinera"
+  ],
+  "author": "David L",
+  "license": "Apache2",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+//    "node-schedule": "^1.3.2",
+    "nodemon": "^1.18.10",
+    "mongoose": "^5.4.12",
+    "request": "^2.88.0"
+  }
+}
